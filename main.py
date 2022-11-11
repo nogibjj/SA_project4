@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import uvicorn
-import fantasy
+import logic.fantasy as fantasy
 
 app = FastAPI()
 
