@@ -4,7 +4,7 @@ import pandas as pd
 
 class Fantasy:
     #load in data
-    data = pd.read_csv('../players.csv')
+    data = pd.read_csv('players.csv')
     #drop players wiht no data on points, rebounds, assists
     data.dropna(subset=['Points', 'Rebounds', 'Assists'], inplace=True)
     global all_positions
