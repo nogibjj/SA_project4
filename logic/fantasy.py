@@ -1,11 +1,10 @@
 import pandas as pd
-#from fastapi import FastAPI
 
 #positions: ['SG' 'PG' 'C' 'F' 'SF' 'PF' 'G']
 
 class Fantasy:
     #load in data
-    data = pd.read_csv('players.csv')
+    data = pd.read_csv('../players.csv')
     #drop players wiht no data on points, rebounds, assists
     data.dropna(subset=['Points', 'Rebounds', 'Assists'], inplace=True)
     global all_positions
@@ -36,7 +35,7 @@ class Fantasy:
         roster['Avg_Rebounds'] = self.my_team['Rebounds'].mean().round(3)
         roster['Avg_Assists'] = self.my_team['Assists'].mean().round(3)
         self.roster = roster
-        return roster
+        return self.roster
 
     def sub_player(self, position_sub):
         assert position_sub in ['SG', 'PG', 'C', 'F', 'SF', 'PF', 'G']
