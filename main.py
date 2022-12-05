@@ -2,10 +2,11 @@ from fastapi import FastAPI
 import uvicorn
 import logic.fantasy as fantasy
 
-#uvicorn main:app --reload
+# uvicorn main:app --reload
 
 app = FastAPI()
 my_team = None
+
 
 @app.get("/")
 async def root():
@@ -14,7 +15,7 @@ async def root():
 
 @app.get("/draft/{team_name}")
 async def draft_team(team_name):
-    global my_team  
+    global my_team
     my_team = fantasy.Fantasy(team_name)
     my_team.draft_team()
     my_team.create_roster()
