@@ -1,3 +1,4 @@
+[![Continuous Integration](https://github.com/nogibjj/SA_project4/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/SA_project4/actions/workflows/main.yml)
 # Project 4: Continuous Delivery of FastAPI Data Engineering API on AWS
 
 ## Project Description:
